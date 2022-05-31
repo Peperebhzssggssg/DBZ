@@ -2,10 +2,52 @@
 <html>
 <head>
 	<title>DBZ</title>
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-<h1>Pagina</h1>
+<h1>Practica para sumar</h1>
 <h3>Por Antonio</h3>
+<form name="registro">
+	<table>
+		<tr>
+			<tr><td>Numero:</td>
+			<td><input type="text" name="dato1" id="dato1"></td></tr>
+			<tr><td>Numero:</td>
+			<td><input type="text" name="dato2" id="dato2"></td></tr>
+		</tr>
+		<td>OPERACION: </td>
+		<td><input type="button" name="Enviar" value="+" onclick="sumadedatos()">		
+			<input type="button" name="Enviar" value="*" onclick="multiplicaciondatos()">
+		<input type="button" name="Enviar" value="-" onclick="restadedatos()"></td>
+
+	</table>
+	<table>
+		<tr>
+			<td><strong>RESULTADO</td>
+				<td><input type="text" name="Baki" id="Baki"></td>
+		</tr>
+	</table>
+</form>
+<script type="text/javascript">
+	function sumadedatos(){
+		var d1=parseInt(document.getElementById('dato1').value);
+		var d2=parseInt(document.getElementById('dato2').value);
+		document.registro.Baki.value=d1+d2;
+	}
+</script>
+<script type="text/javascript">
+	function multiplicaciondatos(){
+		var d1=parseInt(document.getElementById('dato1').value);
+		var d2=parseInt(document.getElementById('dato2').value);
+		document.registro.Baki.value=d1*d2;
+	}
+</script>
+<script type="text/javascript">
+	function restadedatos(){
+		var d1=parseInt(document.getElementById('dato1').value);
+		var d2=parseInt(document.getElementById('dato2').value);
+		document.registro.Baki.value=d1-d2;
+	}
+</script>
 </body>
 </html>
